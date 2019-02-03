@@ -3,12 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+//引入此时已变成vue插件的axios
+import Http from '../src/plugins/http'
 // 关闭生产阶段日志的输出
 Vue.config.productionTip = false
     //使用element-ui
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// 引入公共样式
+import "@/assets/index.css"
 Vue.use(ElementUI)
+Vue.use(Http)
 
 /* eslint-disable no-new */
 new Vue({

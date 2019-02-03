@@ -1,0 +1,8 @@
+/* 整个项目用的默认样式 */
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
