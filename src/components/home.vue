@@ -15,14 +15,14 @@
     <el-container>
       <el-aside class="aside">
         <el-col :span="12" class="col">
-          <el-menu default-active="2" :unique-opened="true">
+          <el-menu default-active="2" :unique-opened="true" router>
             <!-- 1 -->
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>用户管理</span>
               </template>
-              <el-menu-item index="1-1">
+              <el-menu-item index="users">
                 <i class="el-icon-menu"></i>
                 用户列表
               </el-menu-item>
@@ -90,7 +90,9 @@
           </el-menu>
         </el-col>
       </el-aside>
-      <el-main class="main">Main</el-main>
+      <el-main class="main">
+        <!-- 组件渲染容器 -->
+        <router-view></router-view></el-main>
     </el-container>
   </el-container>
 </template>

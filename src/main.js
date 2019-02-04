@@ -16,6 +16,15 @@ Vue.use(ElementUI)
 Vue.use(Http)
 
 /* eslint-disable no-new */
+//在入口文件创建一个处理时间的过滤器
+//下载moment.js 处理时间格式的  npm i moment
+//引入momemt.js文件
+import moment from 'moment'
+//定义过滤器
+Vue.filter('fmDate', (v) => {
+    return moment(v).format('YYYY-MM-DD');
+});
+
 new Vue({
     el: '#app',
     router,
